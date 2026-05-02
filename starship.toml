@@ -1,0 +1,181 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                        STARSHIP PROMPT CONFIG                              ║
+# ║  Active palette: catppuccin_mocha                                          ║
+# ║  To switch: change `palette = "..."` below and uncomment that palette      ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+add_newline = true
+
+# ── Active Palette ─────────────────────────────────────────────────────────────
+# Swap this value to any palette name defined at the bottom of this file:
+#   catppuccin_mocha | persona4_golden | persona5_royal | persona3_reload
+#   gruvbox_dark | persona_green | persona_purple | persona_orange
+palette = "persona_purple"
+
+format = """
+[╭─](overlay0)$username$directory$git_branch$git_status$fill$cmd_duration$time
+[╰─](overlay0)$character"""
+
+# ── Modules ────────────────────────────────────────────────────────────────────
+
+[fill]
+symbol = " "
+
+[username]
+show_always = true
+format = "[  $user ]($style)"
+style_user = "bg:surface0 fg:pink"
+style_root = "bg:surface0 fg:red"
+
+[directory]
+format = "[  $path ]($style)"
+style = "bg:surface1 fg:lavender"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " "
+
+[git_branch]
+symbol = " "
+format = "[ $symbol$branch ]($style)"
+style = "bg:surface0 fg:blue"
+
+[git_status]
+format = "[ $all_status$ahead_behind ]($style)"
+style = "bg:surface0 fg:teal"
+
+[cmd_duration]
+min_time = 500
+format = "[ $duration](fg:blue)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = " [ $time](fg:pink)"
+
+[character]
+success_symbol = "[❯](bold fg:mint)"
+error_symbol = "[❯](bold fg:red)"
+vicmd_symbol = "[❮](bold fg:teal)"
+
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                            PALETTES                                        ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ── 1. Catppuccin Mocha (DEFAULT) ──────────────────────────────────────────────
+# Soft dark theme with pastel accents. Cozy and easy on the eyes.
+# [palettes.catppuccin_mocha]
+# overlay0 = "#6C7086"
+# surface0 = "#313244"
+# surface1 = "#45475A"
+# blue     = "#89B4FA"
+# lavender = "#B4BEFE"
+# mint     = "#A6E3A1"
+# pink     = "#F6A0CA"
+# red      = "#F38BA8"
+# teal     = "#94E2D5"
+#
+# ── 2. Persona 4 Golden ────────────────────────────────────────────────────────
+# Midnight blue-black base with blazing gold accents. Foggy Inaba nights.
+# To use: set palette = "persona4_golden"
+#
+# [palettes.persona4_golden]
+# overlay0 = "#4a4a6a"   # lifted fog gray         → bracket connectors
+# surface0 = "#1a1a2e"   # deep Inaba midnight     → username / git bg
+# surface1 = "#2a2a44"   # slightly lifted night   → directory bg
+# blue     = "#3d6b9e"   # TV static blue          → git branch, duration
+# lavender = "#8899cc"   # moonlit lavender        → directory path
+# mint     = "#4caf50"   # countryside green       → success prompt char
+# pink     = "#f5c800"   # iconic P4G gold ★       → username, time
+# red      = "#c0392b"   # shadow/danger crimson   → root, error char
+# teal     = "#00bcd4"   # clear Inaba sky         → git status
+
+# ── 3. Persona 5 Royal ─────────────────────────────────────────────────────────
+# Pure black with Phantom Thieves red. Rebellion, heists, and Metaverse neon.
+# To use: set palette = "persona5_royal"
+#
+# [palettes.persona5_royal]
+# overlay0 = "#3a3a3a"   # Metaverse shadow        → bracket connectors
+# surface0 = "#1a1a1a"   # velvet void             → username / git bg
+# surface1 = "#2a2a2a"   # lifted shadow           → directory bg
+# blue     = "#2979ff"   # neon palace blue        → git branch, duration
+# lavender = "#bb86fc"   # Lavenza purple          → directory path
+# mint     = "#4cdc80"   # heist green             → success prompt char
+# pink     = "#ff2233"   # Phantom red ★           → username, time
+# red      = "#ff2233"   # SHOWTIME red            → root, error char
+# teal     = "#00e5ff"   # Mementos neon cyan      → git status
+
+# ── 4. Persona 3 Reload ────────────────────────────────────────────────────────
+# Dark Hour void with phosphorescent teal. Tartarus, memento mori, blue butterfly.
+# To use: set palette = "persona3_reload"
+#
+# [palettes.persona3_reload]
+# overlay0 = "#1e3040"   # Tartarus mist           → bracket connectors
+# surface0 = "#0d1e2e"   # Dark Hour abyss         → username / git bg
+# surface1 = "#152838"   # deep dark teal-black    → directory bg
+# blue     = "#2288ff"   # neon S.E.E.S blue       → git branch, duration
+# lavender = "#aabbee"   # moonlit silver-lavender → directory path
+# mint     = "#40b080"   # tech/Aigis green        → success prompt char
+# pink     = "#00d4e8"   # Dark Hour teal ★        → username, time
+# red      = "#e04040"   # Nyx crimson             → root, error char
+# teal     = "#00d4e8"   # Tartarus teal           → git status
+#
+# # ── 5. Gruvbox Dark ────────────────────────────────────────────────────────────
+# Warm retro brown-grays with earthy amber and green. The classic groove palette.
+# To use: set palette = "gruvbox_dark"
+#
+# [palettes.gruvbox_dark]
+# overlay0 = "#928374"   # gruvbox gray            → bracket connectors
+# surface0 = "#3c3836"   # dark warm gray          → username / git bg
+# surface1 = "#504945"   # medium warm gray        → directory bg
+# blue     = "#83a598"   # gruvbox aqua-blue       → git branch, duration
+# lavender = "#d3869b"   # gruvbox purple-pink     → directory path
+# mint     = "#b8bb26"   # gruvbox bright green    → success prompt char
+# pink     = "#fabd2f"   # gruvbox yellow ★        → username, time
+# red      = "#fb4934"   # gruvbox bright red      → root, error char
+# teal     = "#8ec07c"   # gruvbox bright aqua     → git status
+#
+# ── 6. Persona Green ───────────────────────────────────────────────────────────
+# Forest-black base with neon green. Hacking aesthetic meets Persona energy.
+# To use: set palette = "persona_green"
+#
+# [palettes.persona_green]
+# overlay0 = "#1a3328"   # dark forest shadow      → bracket connectors
+# surface0 = "#0f1f18"   # deep forest void        → username / git bg
+# surface1 = "#162a20"   # lifted forest           → directory bg
+# blue     = "#22dd99"   # aqua-teal contrast      → git branch, duration
+# lavender = "#88ee99"   # pale neon mint          → directory path
+# mint     = "#00ff88"   # neon green ★            → success prompt char
+# pink     = "#00ff88"   # electric green          → username, time
+# red      = "#ff4444"   # alert red               → root, error char
+# teal     = "#00ffcc"   # neon cyan-green         → git status
+#
+# ── 7. Persona Purple ──────────────────────────────────────────────────────────
+# Velvet black with arcana violet. Mysticism, shadows, and the Velvet Room.
+# To use: set palette = "persona_purple"
+#
+[palettes.persona_purple]
+overlay0 = "#2a1a3e"   # deep velvet shadow      → bracket connectors
+surface0 = "#160d22"   # velvet void             → username / git bg
+surface1 = "#1e1230"   # lifted velvet           → directory bg
+blue     = "#7755ee"   # arcana blue-violet      → git branch, duration
+lavender = "#aa88ff"   # pale lavender arcana    → directory path
+mint     = "#88bb88"   # sage green              → success prompt char
+pink     = "#cc44ff"   # vivid violet ★          → username, time
+red      = "#ee4488"   # rose crimson            → root, error char
+teal     = "#aa88ff"   # mystic aqua-purple      → git status
+#
+# ── 8. Persona Orange ──────────────────────────────────────────────────────────
+# Dusk charcoal with ember orange. Autumn Inaba, setting sun, harvest warmth.
+# To use: set palette = "persona_orange"
+#
+# [palettes.persona_orange]
+# overlay0 = "#3a2a1a"   # charcoal lift           → bracket connectors
+# surface0 = "#1e1408"   # dusk charcoal           → username / git bg
+# surface1 = "#2a1e10"   # lifted dusk             → directory bg
+# blue     = "#7799bb"   # evening sky blue-gray   → git branch, duration
+# lavender = "#c0a880"   # warm parchment          → directory path
+# mint     = "#aacc44"   # autumn olive-yellow     → success prompt char
+# pink     = "#ff8800"   # ember orange ★          → username, time
+# red      = "#ff4422"   # flame red               → root, error char
+# teal     = "#88bbcc"   # dawn teal               → git status

@@ -1,0 +1,36 @@
+//* ----  https://github.com/JaKooLit  ---- *//
+/* Waybar Modules Extras */
+
+/* This is where you can add Extra Modules you wish. copy.sh will try to restore*/
+/* this file along with the unique configs and styles. */
+/* IMPORTANT, be mindful with , or ". else waybar will not start */
+
+{
+"custom/yuu-fedora": {
+	"format": "",
+	"tooltip": false
+},
+
+"custom/yuu-fedora-rofi": {
+	"format": "",
+	"on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
+	"tooltip": true,
+	"tooltip-format": "Apps Menu"
+},
+
+"custom/hyprwave": {
+	"return-type": "json",
+	"exec": "$HOME/.config/hypr/scripts/HyprWave_Control.sh status",
+	"interval": 2,
+	"format": "{}",
+	"exec-if": "command -v hyprwave || [ -x \"$HOME/.local/bin/hyprwave\" ]",
+	"tooltip": true,
+	"on-click": "$HOME/.config/hypr/scripts/HyprWave_Control.sh toggle",
+	"on-click-middle": "$HOME/.config/hypr/scripts/HyprWave_Control.sh play",
+	"on-click-right": "$HOME/.config/hypr/scripts/HyprWave_Control.sh expand",
+	"on-scroll-up": "$HOME/.config/hypr/scripts/HyprWave_Control.sh prev",
+	"on-scroll-down": "$HOME/.config/hypr/scripts/HyprWave_Control.sh next",
+	"smooth-scrolling-threshold": 1
+}
+
+}

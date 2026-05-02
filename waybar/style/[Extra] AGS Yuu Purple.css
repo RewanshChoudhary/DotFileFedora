@@ -1,0 +1,330 @@
+/* ---- AGS Yuu (Waybar Port) [Purple Option] ---- */
+
+* {
+    font-family: "Lexend Deca", "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+window#waybar.yuu-top,
+window#waybar.yuu-left {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+tooltip {
+    background: #161822;
+    border: 1px solid #43345f;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+button {
+    all: unset;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+window#waybar.yuu-top #clock,
+window#waybar.yuu-top #cpu,
+window#waybar.yuu-top #disk,
+window#waybar.yuu-top #memory,
+window#waybar.yuu-top #mpris,
+window#waybar.yuu-top #pulseaudio,
+window#waybar.yuu-top #temperature,
+window#waybar.yuu-top #tray,
+window#waybar.yuu-top #window,
+window#waybar.yuu-top #custom-music,
+window#waybar.yuu-top #custom-playerctl,
+window#waybar.yuu-top #custom-weather,
+window#waybar.yuu-top #custom-weather.clearNight,
+window#waybar.yuu-top #custom-weather.cloudyFoggyDay,
+window#waybar.yuu-top #custom-weather.cloudyFoggyNight,
+window#waybar.yuu-top #custom-weather.default,
+window#waybar.yuu-top #custom-weather.rainyDay,
+window#waybar.yuu-top #custom-weather.rainyNight,
+window#waybar.yuu-top #custom-weather.severe,
+window#waybar.yuu-top #custom-weather.showyIcyDay,
+window#waybar.yuu-top #custom-weather.snowyIcyNight,
+window#waybar.yuu-top #custom-weather.sunnyDay,
+window#waybar.yuu-top #custom-yuu-fedora {
+    color: #ffffff;
+    background: rgba(22, 24, 34, 0.96);
+    border: 1px solid rgba(94, 76, 145, 0.52);
+    border-radius: 0 0 10px 10px;
+    margin: 0 2px;
+    padding: 2px 8px;
+}
+
+window#waybar.yuu-top #cpu,
+window#waybar.yuu-top #temperature,
+window#waybar.yuu-top #memory,
+window#waybar.yuu-top #disk,
+window#waybar.yuu-top #mpris,
+window#waybar.yuu-top #pulseaudio,
+window#waybar.yuu-top #clock {
+    color: #a97af4;
+    font-weight: 600;
+}
+
+window#waybar.yuu-top #custom-music {
+    color: #a97af4;
+    min-width: 230px;
+}
+
+window#waybar.yuu-top #custom-yuu-fedora {
+    color: #a97af4;
+    font-size: 20px;
+    padding: 1px 13px 4px;
+    border-radius: 0 0 20px 0;
+}
+
+window#waybar.yuu-top .modules-left > widget:first-child > #custom-yuu-fedora {
+    margin-left: 0;
+}
+
+window#waybar.yuu-top #window {
+    color: #ffffff;
+    min-width: 175px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+window#waybar.empty #window {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: transparent;
+    border: none;
+}
+
+window#waybar.yuu-top #mpris {
+    border-radius: 0 0 0 12px;
+    margin-right: 0;
+    padding-right: 6px;
+}
+
+window#waybar.yuu-top #custom-music {
+    border-radius: 0 0 12px 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+window#waybar.yuu-top #custom-playerctl {
+    border-radius: 0 0 12px 0;
+    margin-left: 0;
+    min-width: 250px;
+    padding-left: 6px;
+}
+
+window#waybar.yuu-top #custom-playerctl.Paused,
+window#waybar.yuu-top #custom-playerctl.paused {
+    color: #c5a6ff;
+}
+
+window#waybar.yuu-top #tray {
+    margin-right: 0;
+    padding: 1px 5px;
+}
+
+window#waybar.yuu-top #tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+window#waybar.yuu-top #tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #43345f;
+    border-radius: 8px;
+}
+
+window#waybar.yuu-top #pulseaudio {
+    margin-left: 0;
+}
+
+window#waybar.yuu-top #clock {
+    border-radius: 0 0 0 10px;
+    margin-right: 0;
+    padding-right: 6px;
+}
+
+window#waybar.yuu-top #custom-weather,
+window#waybar.yuu-top #custom-weather.clearNight,
+window#waybar.yuu-top #custom-weather.cloudyFoggyDay,
+window#waybar.yuu-top #custom-weather.cloudyFoggyNight,
+window#waybar.yuu-top #custom-weather.default,
+window#waybar.yuu-top #custom-weather.rainyDay,
+window#waybar.yuu-top #custom-weather.rainyNight,
+window#waybar.yuu-top #custom-weather.severe,
+window#waybar.yuu-top #custom-weather.showyIcyDay,
+window#waybar.yuu-top #custom-weather.snowyIcyNight,
+window#waybar.yuu-top #custom-weather.sunnyDay {
+    background: #8e63d8;
+    border-color: #8e63d8;
+    color: #0f1020;
+    font-weight: 700;
+    margin-left: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.clearNight,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.cloudyFoggyDay,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.cloudyFoggyNight,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.default,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.rainyDay,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.rainyNight,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.severe,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.showyIcyDay,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.snowyIcyNight,
+window#waybar.yuu-top .modules-right > widget:last-child > #custom-weather.sunnyDay {
+    margin-right: 0;
+}
+
+window#waybar.yuu-top #temperature.critical {
+    color: #c38bff;
+}
+
+window#waybar.yuu-left #workspaces {
+    background: rgba(10, 12, 20, 0.97);
+    border: 1px solid rgba(94, 76, 145, 0.68);
+    border-radius: 0 0 10px 0;
+    padding: 8px 6px;
+    margin: 0;
+}
+
+window#waybar.yuu-left #workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    border-radius: 999px;
+    background: #362b4d;
+    color: transparent;
+    font-size: 0;
+    min-width: 7px;
+    min-height: 10px;
+    padding: 0;
+    margin: 3px 0;
+    transition: all 0.2s ease;
+}
+
+window#waybar.yuu-left #workspaces button label {
+    font-size: 0;
+}
+
+window#waybar.yuu-left #workspaces button:hover {
+    background: #7b63b1;
+}
+
+window#waybar.yuu-left #workspaces button.active {
+    background: #9576d9;
+    min-height: 24px;
+}
+
+window#waybar.yuu-left #workspaces button.urgent {
+    background: #b16eff;
+}
+
+/* Rounded, gapless top-bar refinement */
+window#waybar.yuu-top .modules-left,
+window#waybar.yuu-top .modules-center,
+window#waybar.yuu-top .modules-right {
+    background: rgba(8, 10, 16, 0.98);
+    border: 1px solid rgba(94, 76, 145, 0.68);
+    border-radius: 14px;
+    padding: 1px 4px;
+    margin: 2px 2px 0;
+}
+
+window#waybar.yuu-top #clock,
+window#waybar.yuu-top #cpu,
+window#waybar.yuu-top #disk,
+window#waybar.yuu-top #memory,
+window#waybar.yuu-top #mpris,
+window#waybar.yuu-top #pulseaudio,
+window#waybar.yuu-top #temperature,
+window#waybar.yuu-top #tray,
+window#waybar.yuu-top #window,
+window#waybar.yuu-top #custom-music,
+window#waybar.yuu-top #custom-playerctl,
+window#waybar.yuu-top #custom-yuu-fedora {
+    background: transparent;
+    border: none;
+    margin: 0;
+    border-radius: 9px;
+    padding: 2px 7px;
+}
+
+window#waybar.yuu-top #custom-yuu-fedora {
+    color: #cfb8ff;
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 9px;
+}
+
+window#waybar.yuu-top #cpu,
+window#waybar.yuu-top #temperature,
+window#waybar.yuu-top #memory,
+window#waybar.yuu-top #disk,
+window#waybar.yuu-top #mpris,
+window#waybar.yuu-top #pulseaudio,
+window#waybar.yuu-top #clock,
+window#waybar.yuu-top #custom-music {
+    color: #cfb8ff;
+}
+
+window#waybar.yuu-top #window,
+window#waybar.yuu-top #custom-playerctl {
+    color: #efe9ff;
+}
+
+window#waybar.yuu-top #mpris {
+    padding-right: 4px;
+}
+
+window#waybar.yuu-top #custom-music {
+    min-width: 220px;
+    padding-left: 4px;
+}
+
+window#waybar.yuu-top #window {
+    min-width: 165px;
+}
+
+window#waybar.yuu-top #clock {
+    padding-right: 5px;
+}
+
+window#waybar.yuu-top #custom-weather,
+window#waybar.yuu-top #custom-weather.clearNight,
+window#waybar.yuu-top #custom-weather.cloudyFoggyDay,
+window#waybar.yuu-top #custom-weather.cloudyFoggyNight,
+window#waybar.yuu-top #custom-weather.default,
+window#waybar.yuu-top #custom-weather.rainyDay,
+window#waybar.yuu-top #custom-weather.rainyNight,
+window#waybar.yuu-top #custom-weather.severe,
+window#waybar.yuu-top #custom-weather.showyIcyDay,
+window#waybar.yuu-top #custom-weather.snowyIcyNight,
+window#waybar.yuu-top #custom-weather.sunnyDay {
+    background: #5a3a8a;
+    color: #f4edff;
+    border: none;
+    border-radius: 10px;
+    margin: 0 0 0 4px;
+    padding: 2px 8px;
+}

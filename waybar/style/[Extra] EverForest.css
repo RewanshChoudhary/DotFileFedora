@@ -1,0 +1,217 @@
+/* ----------- Persona 3 Reload Inspired Theme -------- */
+/* Dark Blue Aesthetic with High Contrast for Visibility */
+
+@define-color bg_dim      #0A0E27;
+@define-color black       #000000;
+@define-color white       #FFFFFF;
+@define-color bg0         #0F1419;
+@define-color bg1         #1A1F3A;
+@define-color bg2         #252B4A;
+@define-color bg3         #2E3558;
+@define-color bg4         #3A4466;
+@define-color bg5         #424D75;
+@define-color bg_visual   #1E2845;
+@define-color bg_red      #3D1F2E;
+@define-color bg_green    #1F3D2E;
+@define-color bg_blue     #1A2847;
+@define-color bg_yellow   #3D3A1F;
+@define-color fg          #E8F0FF;
+
+@define-color red         #FF6B7A;
+@define-color orange      #FF9B5E;
+@define-color yellow      #FFD166;
+@define-color green       #6EE7B7;
+@define-color aqua        #5EEAD4;
+@define-color blue        #60A5FA;
+@define-color purple      #C084FC;
+@define-color grey0       #6B7280;
+@define-color grey1       #9CA3AF;
+@define-color grey2       #D1D5DB;
+
+@define-color p3_blue       #0EA5E9;
+@define-color p3_dark_blue  #0C4A6E;
+@define-color p3_light_blue #38BDF8;
+@define-color p3_accent     #22D3EE;
+
+/* ---------------- Global ---------------- */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 0;
+  margin: 0px 1px;
+  border: none;
+  border-radius: 0px;
+}
+
+/* ---------------- Waybar ---------------- */
+
+window#waybar {
+  background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 100%);
+  color: @fg;
+  border-bottom: 2px solid @p3_blue;
+}
+
+window#waybar.hidden {
+  opacity: 0.3;
+}
+
+/* ---------------- Window ---------------- */
+
+#window {
+  padding: 2px 12px;
+  margin: 2px 8px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(14,165,233,0.2), rgba(12,74,110,0.3));
+  color: @p3_light_blue;
+  font-weight: 700;
+  border: 1px solid rgba(14,165,233,0.3);
+}
+
+/* ---------------- Workspaces / Taskbar ---------------- */
+
+#taskbar button,
+#workspaces button {
+  padding: 2px 8px;
+  margin: 1px 2px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(14,165,233,0.3), rgba(12,74,110,0.4));
+  color: @p3_light_blue;
+  border: 1px solid rgba(14,165,233,0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  background: linear-gradient(135deg, @p3_blue, @p3_light_blue);
+  color: @black;
+  font-weight: 800;
+  border: 1px solid @p3_accent;
+  box-shadow: 0 0 15px rgba(14,165,233,0.6);
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+  background: linear-gradient(135deg, @p3_light_blue, @p3_accent);
+  color: @black;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(14,165,233,0.6);
+}
+
+#workspaces button.focused {
+  background: linear-gradient(135deg, @p3_blue, @blue);
+  color: @white;
+  font-weight: 800;
+  border: 2px solid @p3_light_blue;
+}
+
+#workspaces button.urgent {
+  background: linear-gradient(135deg, @red, #DC2626);
+  color: @white;
+  font-weight: 800;
+  border: 2px solid @red;
+  animation: urgent-pulse 1.5s ease-in-out infinite;
+}
+
+/* ---------------- Animations ---------------- */
+
+@keyframes urgent-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,107,122,0.8); }
+  50%      { box-shadow: 0 0 30px rgba(255,107,122,1); }
+}
+
+@keyframes temp-critical {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.7; }
+}
+
+@keyframes charging-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(110,231,183,0.5); }
+  50%      { box-shadow: 0 0 20px rgba(110,231,183,0.9); }
+}
+
+/* GTK-safe: literal colors only */
+/* GTK-safe: literal colors only */
+@keyframes battery-blink {
+    0% {
+          background: linear-gradient(135deg, #FF6B7A, #DC2626);
+              color: #1A1F3A;
+                }
+                  100% {
+                        background: #FFFFFF;
+                            color: #FF6B7A;
+                              }
+                            }
+
+                            /* ---------------- System Modules ---------------- */
+
+#cpu,
+#memory {
+  padding: 2px 8px;
+  background: linear-gradient(135deg, @yellow, #F59E0B);
+  color: @black;
+  font-weight: 700;
+  border: 1px solid @yellow;
+}
+
+#temperature {
+  padding: 2px 8px;
+  background: linear-gradient(135deg, @green, #10B981);
+  color: @black;
+  font-weight: 700;
+  border: 1px solid @green;
+}
+
+#temperature.critical {
+  background: linear-gradient(135deg, @red, #DC2626);
+  animation: temp-critical 1s ease-in-out infinite;
+}
+
+#battery {
+  padding: 2px 8px;
+  background: linear-gradient(135deg, @aqua, #14B8A6);
+  color: @black;
+  font-weight: 700;
+  border: 1px solid @aqua;
+}
+
+#battery.charging {
+  background: linear-gradient(135deg, @green, #10B981);
+  color: @white;
+  animation: charging-glow 2s ease-in-out infinite;
+}
+
+#battery.critical:not(.charging) {
+  background: linear-gradient(135deg, @red, #DC2626);
+  color: @white;
+  font-weight: 800;
+  animation: battery-blink 1.5s steps(12) infinite alternate;
+}
+
+/* ---------------- Clock ---------------- */
+
+#clock {
+  padding: 2px 10px;
+  margin: 2px 4px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, @p3_accent, @p3_light_blue);
+  color: @black;
+  font-weight: 800;
+  border: 1px solid @p3_blue;
+  box-shadow: 0 0 10px rgba(34,211,238,0.4);
+}
+
+/* ---------------- Tooltip ---------------- */
+
+tooltip {
+  background: linear-gradient(135deg, #0F1419, #1A1F3A);
+  border: 2px solid @p3_blue;
+  border-radius: 8px;
+  color: @fg;
+}
+
+tooltip label {
+  padding: 8px;
+  font-weight: 600;
+}

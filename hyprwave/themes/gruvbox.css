@@ -1,0 +1,102 @@
+/* ========================================
+   HyprWave - Gruvbox Dark
+   Warm retro palette inspired by Gruvbox
+   ======================================== */
+
+:root {
+    /* Background Colors */
+    --bg-primary: rgba(40, 40, 40, 0.82);
+    --bg-secondary: rgba(60, 56, 54, 0.86);
+    --bg-album-cover: rgba(80, 73, 69, 0.90);
+    --bg-album-secondary: rgba(102, 92, 84, 0.92);
+
+    /* Button Colors - Default (Prev/Next) */
+    --btn-default: rgba(213, 196, 161, 0.90);
+    --btn-default-secondary: rgba(189, 174, 147, 0.90);
+    --btn-default-hover: rgba(235, 219, 178, 0.96);
+    --btn-default-hover-secondary: rgba(213, 196, 161, 0.96);
+
+    /* Button Colors - Play/Pause */
+    --btn-play: rgba(184, 187, 38, 0.96);
+    --btn-play-secondary: rgba(152, 151, 26, 0.96);
+    --btn-play-hover: rgba(184, 187, 38, 0.99);
+    --btn-play-hover-secondary: rgba(168, 153, 27, 0.99);
+    --btn-play-active: rgba(121, 116, 14, 0.95);
+    --btn-play-active-secondary: rgba(101, 93, 6, 0.95);
+
+    /* Button Colors - Expand */
+    --btn-expand: rgba(69, 133, 136, 0.96);
+    --btn-expand-secondary: rgba(56, 108, 112, 0.96);
+    --btn-expand-hover: rgba(131, 165, 152, 0.98);
+    --btn-expand-hover-secondary: rgba(104, 157, 106, 0.98);
+    --btn-expand-active: rgba(61, 102, 107, 0.95);
+    --btn-expand-active-secondary: rgba(48, 85, 89, 0.95);
+
+    /* Progress Bar Colors */
+    --progress-bg: rgba(102, 92, 84, 0.30);
+    --progress-fill-start: rgba(184, 187, 38, 0.95);
+    --progress-fill-end: rgba(69, 133, 136, 0.95);
+
+    /* Slider Handle Colors */
+    --handle-color: rgba(251, 241, 199, 0.98);
+    --handle-hover: rgba(252, 247, 220, 1.0);
+    --handle-border: rgba(184, 187, 38, 0.56);
+    --handle-shadow: rgba(184, 187, 38, 0.62);
+
+    /* Text Colors */
+    --text-primary: rgba(235, 219, 178, 0.96);
+    --text-secondary: rgba(213, 196, 161, 0.90);
+    --text-tertiary: rgba(189, 174, 147, 0.84);
+    --text-muted: rgba(146, 131, 116, 0.76);
+
+    /* Border Colors */
+    --border-primary: rgba(102, 92, 84, 0.56);
+    --border-button: rgba(146, 131, 116, 0.34);
+    --border-button-hover: rgba(168, 153, 132, 0.44);
+    --border-play: rgba(184, 187, 38, 0.44);
+    --border-play-hover: rgba(200, 201, 70, 0.56);
+    --border-expand: rgba(69, 133, 136, 0.44);
+    --border-expand-hover: rgba(104, 157, 106, 0.56);
+
+    /* Shadow Colors */
+    --shadow-default: rgba(0, 0, 0, 0.64);
+    --shadow-button: rgba(0, 0, 0, 0.50);
+    --shadow-play: rgba(184, 187, 38, 0.44);
+    --shadow-play-hover: rgba(200, 201, 70, 0.62);
+    --shadow-expand: rgba(69, 133, 136, 0.44);
+    --shadow-expand-hover: rgba(104, 157, 106, 0.62);
+    --shadow-focus: rgba(184, 187, 38, 0.62);
+
+    /* Spacing & Sizes */
+    --border-radius-container: 100px;
+    --border-radius-section: 20px;
+    --border-radius-album: 16px;
+    --border-radius-button: 50%;
+    --border-radius-progress: 2px;
+
+    --padding-container: 12px;
+    --padding-section: 16px;
+}
+
+.visualizer-bar {
+    background: linear-gradient(180deg,
+        rgba(251, 241, 199, 0.98),
+        rgba(184, 187, 38, 0.96),
+        rgba(69, 133, 136, 0.94));
+    border-radius: 0px;
+    transition: all 0.05s ease-out;
+    margin: 0px;
+    min-width: 1px;
+    min-height: 3px;
+    box-shadow: 0 0 14px rgba(184, 187, 38, 0.70),
+                0 0 9px rgba(69, 133, 136, 0.56);
+}
+
+.vertical-display-label {
+    font-family: 'VT323', monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(235, 219, 178, 0.98);
+    letter-spacing: 0px;
+    line-height: 1.2;
+}

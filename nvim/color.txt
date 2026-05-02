@@ -1,0 +1,206 @@
+Persona 5 Royal — Phantom Thieves 
+lua
+
+-- ~/.config/nvim/lua/plugins/persona5.lua
+return {
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night",
+      on_colors = function(c)
+        -- P5R: Stark black, blood red, pure white, gold
+        c.bg           = "#0D0D0D"  -- Velvet Room black
+        c.bg_dark      = "#000000"  -- Pure void
+        c.bg_highlight = "#1A0000"  -- Dark crimson shadow
+        c.fg           = "#FFFFFF"  -- Phantom white
+        c.red          = "#FF0000"  -- Morgana red / Joker mask
+        c.red1         = "#CC0000"
+        c.orange       = "#FF4500"  -- Flame accent
+        c.yellow       = "#FFD700"  -- Gold trim
+        c.green        = "#00FF41"  -- Matrix-ish terminal green
+        c.cyan         = "#FF1493"  -- Hot pink UI glitch
+        c.blue         = "#FF0033"  -- Red-shifted blue
+        c.blue1        = "#C0392B"
+        c.blue5        = "#FF6B6B"
+        c.magenta      = "#FF0055"  -- Phantom red-magenta
+        c.comment      = "#555555"  -- Grayed-out shadows
+        c.border       = "#FF0000"  -- Red borders, very P5
+      end,
+      on_highlights = function(hl, c)
+        hl.CursorLine      = { bg = "#1A0000" }
+        hl.Visual          = { bg = "#3D0000" }
+        hl.Search          = { bg = "#FF0000", fg = "#000000", bold = true }
+        hl.IncSearch       = { bg = "#FFD700", fg = "#000000", bold = true }
+        hl.LineNr          = { fg = "#FF0000" }
+        hl.CursorLineNr    = { fg = "#FFD700", bold = true }
+        hl.FloatBorder     = { fg = "#FF0000", bg = "#0D0D0D" }
+        hl.NormalFloat     = { bg = "#0A0000" }
+        hl.StatusLine      = { bg = "#FF0000", fg = "#000000", bold = true }
+        hl.TabLineSel      = { bg = "#FF0000", fg = "#FFFFFF", bold = true }
+        hl.WinSeparator    = { fg = "#FF0000" }
+        -- AI agent / LSP diagnostics
+        hl.DiagnosticError = { fg = "#FF0000", bold = true }
+        hl.DiagnosticWarn  = { fg = "#FFD700" }
+        hl.DiagnosticInfo  = { fg = "#FF6B6B" }
+        hl.DiagnosticHint  = { fg = "#FF1493" }
+      end,
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+}
+
+Palette reference:
+Role	Hex	Description
+Background	#0D0D0D	Metaverse black
+Foreground	#FFFFFF	Phantom white
+Primary	#FF0000	Joker red
+Accent	#FFD700	Gold trim
+Shadow	#1A0000	Crimson shadow
+Glitch	#FF1493	Hot pink alert
+Persona 3 Reload — Dark Hour 
+lua
+
+-- ~/.config/nvim/lua/plugins/persona3.lua
+return {
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night",
+      on_colors = function(c)
+        -- P3R: Deep navy, teal-blue, green coffin, pale moonlight
+        c.bg           = "#050A14"  -- Dark Hour midnight
+        c.bg_dark      = "#020509"  -- Tartarus abyss
+        c.bg_highlight = "#0A1A2E"  -- Moonlit highlight
+        c.fg           = "#C8E6FF"  -- Pale blue moonlight
+        c.red          = "#FF4D6A"  -- Death arcana red
+        c.orange       = "#FF7A45"
+        c.yellow       = "#7FE5C8"  -- Teal-green (coffins!)
+        c.green        = "#00E5CC"  -- SEES HUD green
+        c.cyan         = "#00BFFF"  -- Evoker blue
+        c.blue         = "#1E90FF"  -- Deep Tartarus blue
+        c.blue1        = "#4169E1"
+        c.blue5        = "#87CEEB"  -- Sky at Dark Hour
+        c.magenta      = "#9B59B6"  -- Velvet Room purple
+        c.comment      = "#2A4A6B"  -- Subdued blue-gray
+        c.border       = "#00BFFF"
+      end,
+      on_highlights = function(hl, c)
+        hl.CursorLine      = { bg = "#0A1929" }
+        hl.Visual          = { bg = "#0D2B4A" }
+        hl.Search          = { bg = "#00BFFF", fg = "#000000", bold = true }
+        hl.IncSearch       = { bg = "#00E5CC", fg = "#000000", bold = true }
+        hl.LineNr          = { fg = "#1E5080" }
+        hl.CursorLineNr    = { fg = "#00E5CC", bold = true }
+        hl.FloatBorder     = { fg = "#00BFFF", bg = "#050A14" }
+        hl.NormalFloat     = { bg = "#030810" }
+        hl.StatusLine      = { bg = "#00BFFF", fg = "#000000", bold = true }
+        hl.TabLineSel      = { bg = "#1E90FF", fg = "#FFFFFF", bold = true }
+        hl.WinSeparator    = { fg = "#1E4A7A" }
+        -- AI agent diagnostics
+        hl.DiagnosticError = { fg = "#FF4D6A", bold = true }
+        hl.DiagnosticWarn  = { fg = "#7FE5C8" }
+        hl.DiagnosticInfo  = { fg = "#00BFFF" }
+        hl.DiagnosticHint  = { fg = "#9B59B6" }
+      end,
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+}
+
+Palette reference:
+Role	Hex	Description
+Background	#050A14	Dark Hour midnight
+Foreground	#C8E6FF	Pale moonlight
+Primary	#00BFFF	Evoker blue
+Accent	#00E5CC	SEES teal
+Shadow	#0A1A2E	Tartarus depths
+Death	#FF4D6A	Red arcana
+Persona 4 Golden — Inaba Fog 
+lua
+
+-- ~/.config/nvim/lua/plugins/persona4.lua
+return {
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night",
+      on_colors = function(c)
+        -- P4G: Warm yellow, foggy gray, TV static, Investigation Team gold
+        c.bg           = "#1A1400"  -- Midnight yellow-black
+        c.bg_dark      = "#0F0C00"  -- TV world void
+        c.bg_highlight = "#2A2000"  -- Foggy warmth
+        c.fg           = "#FFF8DC"  -- Cornsilk warm white
+        c.red          = "#FF6B35"  -- Warm orange-red
+        c.orange       = "#FF8C00"  -- Dark goldenrod
+        c.yellow       = "#FFD700"  -- Investigation gold
+        c.green        = "#ADFF2F"  -- Yellow-green fog
+        c.cyan         = "#FFE066"  -- Pale gold
+        c.blue         = "#DAA520"  -- Goldenrod
+        c.blue1        = "#B8860B"
+        c.blue5        = "#FFD166"
+        c.magenta      = "#FF69B4"  -- Rise pink
+        c.comment      = "#5A4A00"  -- Warm dark gold
+        c.border       = "#FFD700"
+      end,
+      on_highlights = function(hl, c)
+        hl.CursorLine      = { bg = "#2A1F00" }
+        hl.Visual          = { bg = "#3D2E00" }
+        hl.Search          = { bg = "#FFD700", fg = "#000000", bold = true }
+        hl.IncSearch       = { bg = "#FF8C00", fg = "#000000", bold = true }
+        hl.LineNr          = { fg = "#6B5200" }
+        hl.CursorLineNr    = { fg = "#FFD700", bold = true }
+        hl.FloatBorder     = { fg = "#FFD700", bg = "#1A1400" }
+        hl.NormalFloat     = { bg = "#100E00" }
+        hl.StatusLine      = { bg = "#FFD700", fg = "#000000", bold = true }
+        hl.TabLineSel      = { bg = "#FF8C00", fg = "#000000", bold = true }
+        hl.WinSeparator    = { fg = "#4A3800" }
+        -- AI agent diagnostics
+        hl.DiagnosticError = { fg = "#FF6B35", bold = true }
+        hl.DiagnosticWarn  = { fg = "#FFD700" }
+        hl.DiagnosticInfo  = { fg = "#FFE066" }
+        hl.DiagnosticHint  = { fg = "#FF69B4" }
+      end,
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+}
+
+Palette reference:
+Role	Hex	Description
+Background	#1A1400	Midnight amber
+Foreground	#FFF8DC	Warm cornsilk
+Primary	#FFD700	Investigation gold
+Accent	#FF8C00	Dark goldenrod
+Shadow	#2A2000	Foggy warmth
+Rise	#FF69B4	Rise Kujikawa pink
+Switching Between Themes
+
+Add this to your lazy.nvim setup to toggle between them easily:
+lua
+
+-- In your keymaps.lua
+vim.keymap.set("n", "<leader>cp5", function()
+  -- swap your plugin file and re-source, or just:
+  require("tokyonight").load({ style = "night" }) -- after setting P5 opts
+end, { desc = "Persona 5 Royal theme" })
+
+Or use a theme picker like themery.nvim to hot-swap between all three.
+
+Each scheme is tuned for AI agent workflows — DiagnosticError/Warn/Info/Hint are all styled distinctly so LLM tool output, LSP errors, and inline hints stay visually separated per each game's palette.
+
+

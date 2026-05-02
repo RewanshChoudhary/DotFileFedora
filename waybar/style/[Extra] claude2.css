@@ -1,0 +1,607 @@
+/* ========================================== */
+/*  RETRO COLOR PALETTE COLLECTION  */
+/* ========================================== */
+/* Copy the palette section you want and paste it below this comment block */
+
+/* ========================================== */
+/* 1 NORD AURORA - Cool Nordic Nights */
+/* ========================================== */
+/*
+Background: #2e3440 (deep slate)
+Text: #eceff4 (snow white)
+Accent 1: #88c0d0 (frost cyan)
+Accent 2: #81a1c1 (polar blue)
+Accent 3: #5e81ac (deep blue)
+Accent 4: #bf616a (aurora red)
+Accent 5: #d08770 (aurora orange)
+Accent 6: #ebcb8b (aurora yellow)
+Accent 7: #a3be8c (aurora green)
+Accent 8: #b48ead (aurora purple)
+*/
+
+/* ========================================== */
+/* 2 TOKYO NIGHT - Cyberpunk Neon */
+/* ========================================== */
+/*
+Background: #1a1b26 (dark navy)
+Text: #c0caf5 (light blue)
+Accent 1: #7aa2f7 (bright blue)
+Accent 2: #bb9af7 (purple)
+Accent 3: #7dcfff (cyan)
+Accent 4: #f7768e (pink-red)
+Accent 5: #ff9e64 (orange)
+Accent 6: #e0af68 (yellow)
+Accent 7: #9ece6a (green)
+Accent 8: #2ac3de (teal)
+*/
+
+/* ========================================== */
+/* 3 DRACULA - Classic Gothic Elegance */
+/* ========================================== */
+/*
+Background: #282a36 (dark purple-gray)
+Text: #f8f8f2 (off-white)
+Accent 1: #8be9fd (cyan)
+Accent 2: #50fa7b (green)
+Accent 3: #ffb86c (orange)
+Accent 4: #ff79c6 (pink)
+Accent 5: #bd93f9 (purple)
+Accent 6: #ff5555 (red)
+Accent 7: #f1fa8c (yellow)
+Accent 8: #6272a4 (comment gray)
+*/
+
+/* ========================================== */
+/* 4 CATPPUCCIN MOCHA - Warm Pastel Dreams */
+/* ========================================== */
+/*
+Background: #1e1e2e (dark purple)
+Text: #cdd6f4 (lavender)
+Accent 1: #89b4fa (blue)
+Accent 2: #cba6f7 (mauve)
+Accent 3: #f5c2e7 (pink)
+Accent 4: #f38ba8 (red)
+Accent 5: #fab387 (peach)
+Accent 6: #f9e2af (yellow)
+Accent 7: #a6e3a1 (green)
+Accent 8: #94e2d5 (teal)
+*/
+
+/* ========================================== */
+/* 5 SOLARIZED DARK - Refined Earth Tones */
+/* ========================================== */
+/*
+Background: #002b36 (deep blue-black)
+Text: #839496 (base0)
+Accent 1: #268bd2 (blue)
+Accent 2: #2aa198 (cyan)
+Accent 3: #859900 (green)
+Accent 4: #b58900 (yellow)
+Accent 5: #cb4b16 (orange)
+Accent 6: #dc322f (red)
+Accent 7: #d33682 (magenta)
+Accent 8: #6c71c4 (violet)
+*/
+
+/* ========================================== */
+/* 6 PALENIGHT - Soft Purple Haze */
+/* ========================================== */
+/*
+Background: #292d3e (dark purple-blue)
+Text: #bfc7d5 (light gray)
+Accent 1: #82aaff (bright blue)
+Accent 2: #c792ea (purple)
+Accent 3: #89ddff (cyan)
+Accent 4: #f07178 (coral-red)
+Accent 5: #f78c6c (orange)
+Accent 6: #ffcb6b (yellow)
+Accent 7: #c3e88d (green)
+Accent 8: #ff5370 (red)
+*/
+
+/* ========================================== */
+/* 7 ONE DARK - Developer's Classic */
+/* ========================================== */
+/*
+Background: #282c34 (charcoal)
+Text: #abb2bf (light gray)
+Accent 1: #61afef (blue)
+Accent 2: #c678dd (purple)
+Accent 3: #56b6c2 (cyan)
+Accent 4: #e06c75 (red)
+Accent 5: #d19a66 (orange)
+Accent 6: #e5c07b (yellow)
+Accent 7: #98c379 (green)
+Accent 8: #be5046 (dark red)
+*/
+
+/* ========================================== */
+/* 8 EVERFOREST - Forest Sanctuary */
+/* ========================================== */
+/*
+Background: #2b3339 (dark forest)
+Text: #d3c6aa (warm beige)
+Accent 1: #7fbbb3 (aqua)
+Accent 2: #83c092 (green)
+Accent 3: #dbbc7f (yellow)
+Accent 4: #e69875 (orange)
+Accent 5: #e67e80 (red)
+Accent 6: #d699b6 (purple)
+Accent 7: #a7c080 (light green)
+Accent 8: #859289 (gray-green)
+*/
+
+/* ========================================== */
+/* 9 ROSÉ PINE - Cozy Low Contrast */
+/* ========================================== */
+/*
+Background: #191724 (deep purple-black)
+Text: #e0def4 (foam white)
+Accent 1: #9ccfd8 (foam cyan)
+Accent 2: #c4a7e7 (iris purple)
+Accent 3: #ebbcba (rose pink)
+Accent 4: #eb6f92 (love red)
+Accent 5: #f6c177 (gold)
+Accent 6: #31748f (pine blue)
+Accent 7: #9ccfd8 (foam)
+Accent 8: #908caa (muted lavender)
+*/
+
+/* ========================================== */
+/*  HORIZON - Warm Sunset Gradient */
+/* ========================================== */
+/*
+Background: #1c1e26 (dark purple-black)
+Text: #e3e6ee (light gray)
+Accent 1: #26bbd9 (bright cyan)
+Accent 2: #ee64ac (pink)
+Accent 3: #09f7a0 (bright green)
+Accent 4: #f43e5c (red)
+Accent 5: #fab795 (peach)
+Accent 6: #fac29a (light orange)
+Accent 7: #21bfc2 (teal)
+Accent 8: #b877db (purple)
+*/
+
+/* ========================================== */
+/* 11 MOONLIGHT - Deep Space Blue */
+/* ========================================== */
+/*
+Background: #212337 (space blue)
+Text: #c8d3f5 (moonlight)
+Accent 1: #82aaff (blue)
+Accent 2: #c099ff (purple)
+Accent 3: #86e1fc (cyan)
+Accent 4: #ff757f (red)
+Accent 5: #ff966c (orange)
+Accent 6: #ffc777 (yellow)
+Accent 7: #c3e88d (green)
+Accent 8: #ff98a4 (pink)
+*/
+
+/* ========================================== */
+/* 12 AURA - Mystical Dark Magic */
+/* ========================================== */
+/*
+Background: #110f18 (deep void)
+Text: #edecee (ghost white)
+Accent 1: #61ffca (mint)
+Accent 2: #a277ff (violet)
+Accent 3: #82e2ff (sky blue)
+Accent 4: #ff6767 (red)
+Accent 5: #ffca85 (orange)
+Accent 6: #f694ff (pink)
+Accent 7: #29f1c3 (cyan)
+Accent 8: #15141b (darker void)
+*/
+
+/* ========================================== */
+/* ACTIVE THEME - PICK YOUR FAVORITE! */
+/* ========================================== */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    padding: 0;
+    margin: 0;
+}
+
+/*  CHANGE THESE VALUES TO YOUR CHOSEN PALETTE  */
+window#waybar {
+    background-color: #2e3440;  /* Background */
+    border-bottom: 1px solid #3b4252;
+    color: #eceff4;  /* Text */
+    transition-property: background-color;
+    transition-duration: .3s;
+    padding: 0;
+    margin: 0;
+    opacity: 2;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+button {
+    all: unset;
+    background-color: rgba(136, 192, 208, 0.15);  /* Accent 1 with transparency */
+    color: #eceff4;  /* Text */
+    border: none;
+    border-radius: 2px;
+    padding: 0px 8px;
+    margin: 1px;
+    min-height: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(129, 161, 193, 0.25);  /* Accent 2 with transparency */
+    color: #ffffff;
+}
+
+button.active {
+    background-color: #88c0d0;  /* Accent 1 */
+    color: #2e3440;  /* Background */
+}
+
+#mode {
+    background-color: #ebcb8b;  /* Accent 6 */
+    color: #2e3440;  /* Background */
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,	
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    color: #eceff4;  /* Text */
+    padding: 3px 3px;
+    margin: 2px 3px;
+    border-radius: 2px;
+    background-color: rgba(59, 66, 82, 0.5);
+}
+
+#window,
+#workspaces {
+    margin: 0 2px;
+}
+.modules-center {
+  margin : 0 2px;
+}
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+    font-weight:900;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#window {
+    background-color: rgba(94, 129, 172, 0.3);  /* Accent 3 with transparency */
+    color: #eceff4;  /* Text */
+    padding: 3px 3px;
+}
+
+#custom-swaync {
+    background-color: #88c0d0;  /* Accent 1 */
+    color: #2e3440;  /* Background */
+}
+
+#custom-menu {
+    background-color: #a3be8c;  /* Accent 7 */
+    color: #2e3440;  /* Background */
+}
+
+#custom-power {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+    padding: 3px 10px;
+}
+
+#custom-power_vertical {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+}
+
+#clock {
+    background-color: #ebcb8b;  /* Accent 6 */
+    color: #2e3440;  /* Background */
+    font-weight: 900;
+}
+
+#battery {
+    background-color: #a3be8c;  /* Accent 7 */
+    color: #2e3440;  /* Background */
+}
+
+@keyframes blink {
+    to {
+        background-color: #bf616a;  /* Accent 4 */
+        color: #eceff4;  /* Text */
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #3b4252;
+}
+
+#cpu {
+    background-color: #88c0d0;  /* Accent 1 */
+    color: #2e3440;  /* Background */
+}
+
+#memory {
+    background-color: #81a1c1;  /* Accent 2 */
+    color: #2e3440;  /* Background */
+}
+
+#disk {
+    background-color: #d08770;  /* Accent 5 */
+    color: #2e3440;  /* Background */
+}
+
+#custom-lock,
+#custom-light_dark,
+#backlight {
+    background-color: #ebcb8b;  /* Accent 6 */
+    color: #2e3440;  /* Background */
+}
+
+#network {
+    background-color: #5e81ac;  /* Accent 3 */
+    color: #eceff4;  /* Text */
+}
+
+#network.disconnected {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+}
+
+#pulseaudio {
+    background-color: #b48ead;  /* Accent 8 */
+    color: #2e3440;  /* Background */
+}
+
+#pulseaudio.muted {
+    background-color: rgba(180, 142, 173, 0.4);  /* Accent 8 with transparency */
+    color: #4c566a;
+}
+
+#wireplumber {
+    background-color: #b48ead;  /* Accent 8 */
+    color: #2e3440;  /* Background */
+}
+
+#wireplumber.muted {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+}
+
+#custom-media {
+    background-color: #b48ead;  /* Accent 8 */
+    color: #2e3440;  /* Background */
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #a3be8c;  /* Accent 7 */
+    color: #2e3440;  /* Background */
+}
+
+#custom-media.custom-vlc {
+    background-color: #d08770;  /* Accent 5 */
+    color: #2e3440;  /* Background */
+}
+
+#temperature {
+    background-color: #d08770;  /* Accent 5 */
+    color: #2e3440;  /* Background */
+}
+
+#temperature.critical {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+}
+
+#tray {
+    background-color: transparent;
+    padding: 3px 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #bf616a;  /* Accent 4 */
+}
+
+#idle_inhibitor {
+    background-color: rgba(236, 239, 244, 0.2);  /* Text with transparency */
+    color: #eceff4;  /* Text */
+}
+
+#idle_inhibitor.activated {
+    background-color: #a3be8c;  /* Accent 7 */
+    color: #2e3440;  /* Background */
+}
+
+#mpd {
+    background-color: #b48ead;  /* Accent 8 */
+    color: #2e3440;  /* Background */
+}
+
+#mpd.disconnected {
+    background-color: #bf616a;  /* Accent 4 */
+    color: #eceff4;  /* Text */
+}
+
+#mpd.stopped {
+    background-color: rgba(180, 142, 173, 0.4);  /* Accent 8 with transparency */
+    color: #4c566a;
+}
+
+#mpd.paused {
+    background-color: #81a1c1;  /* Accent 2 */
+    color: #2e3440;  /* Background */
+}
+
+#language {
+    background-color: #88c0d0;  /* Accent 1 */
+    color: #2e3440;  /* Background */
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background-color: #a3be8c;  /* Accent 7 */
+    color: #2e3440;  /* Background */
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 4px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#scratchpad {
+    background: rgba(236, 239, 244, 0.1);  /* Text with transparency */
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+tooltip {
+    background-color: #3b4252;
+    border: 1px solid #4c566a;
+    border-radius: 8px;
+}
+
+tooltip decoration {
+    box-shadow: none;
+}
+
+tooltip decoration:backdrop {
+    box-shadow: none;
+}
+
+tooltip label {
+    color: #eceff4;  /* Text */
+    padding: 6px 10px;
+}
+
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    background-color: rgba(76, 86, 106, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: #b48ead;  /* Accent 8 */
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    background-color: rgba(76, 86, 106, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider highlight {
+    background-color: #ebcb8b;  /* Accent 6 */
+    min-height: 3px;
+    border-radius: 3px;
+}

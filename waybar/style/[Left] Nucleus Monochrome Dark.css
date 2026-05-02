@@ -1,0 +1,118 @@
+/* ---- Nucleus Monochrome Dark (Left) ---- */
+
+@define-color bg #111111;
+@define-color bg-soft #0d0d0d;
+@define-color surface #191919;
+@define-color surface-hi #242424;
+@define-color text #e0e0e0;
+@define-color text-soft #a7a7a7;
+@define-color accent #cccccc;
+@define-color accent-on #111111;
+@define-color danger #dddddd;
+@define-color outline #3c3c3c;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "AnomalyMono Nerd Font", "JetBrains Mono Nerd Font", "Symbols Nerd Font";
+    font-size: 12px;
+    font-weight: 700;
+}
+
+window#waybar {
+    background: alpha(@bg, 0.92);
+    color: @text;
+    border: 1px solid alpha(@outline, 0.85);
+    border-radius: 14px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 6px 4px;
+}
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+    margin: 3px 0;
+}
+
+#workspaces,
+#tray,
+#clock,
+#network,
+#bluetooth,
+#battery,
+#pulseaudio,
+#pulseaudio\.microphone,
+#power-profiles-daemon,
+#custom-menu,
+#custom-power,
+#custom-settings,
+#custom-rice,
+#custom-swaync,
+#idle_inhibitor {
+    border-radius: 10px;
+    padding: 6px 6px;
+    background: alpha(@surface, 0.96);
+    color: @text;
+    border: 1px solid alpha(@outline, 0.9);
+}
+
+#workspaces button {
+    all: unset;
+    color: @text-soft;
+    border-radius: 8px;
+    padding: 3px 0;
+}
+
+#workspaces button.active,
+#workspaces button.focused,
+#workspaces button.visible {
+    color: @accent-on;
+    background: alpha(@accent, 0.96);
+}
+
+#custom-settings,
+#custom-rice,
+#custom-power,
+#custom-menu {
+    color: @accent-on;
+    background: alpha(@accent, 0.96);
+    border-color: alpha(@accent, 1);
+}
+
+#network,
+#bluetooth,
+#pulseaudio,
+#pulseaudio\.microphone,
+#power-profiles-daemon {
+    color: @text-soft;
+}
+
+#network.disconnected,
+#bluetooth.disabled,
+#battery.warning,
+#battery.critical,
+#pulseaudio.muted {
+    color: @danger;
+    border-color: alpha(@danger, 0.75);
+}
+
+#group-notify {
+    border-radius: 10px;
+    background: transparent;
+}
+
+tooltip {
+    border-radius: 8px;
+    border: 1px solid alpha(@outline, 0.95);
+    background: alpha(@bg-soft, 0.99);
+    color: @text;
+}
+
+tooltip label {
+    color: @text;
+}

@@ -1,0 +1,159 @@
+/* ---- Nucleus Cyberpunk Dark (Top) ---- */
+
+@define-color bg #0c1017;
+@define-color bg-soft #090d13;
+@define-color surface #11151d;
+@define-color surface-hi #1a2030;
+@define-color text #5c8ac4;
+@define-color text-soft #9b6bc1;
+@define-color accent #c4a82e;
+@define-color accent-2 #00a66c;
+@define-color accent-3 #d14358;
+@define-color accent-on #0e1015;
+@define-color danger #b32d2d;
+@define-color outline #45a0d6;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "AnomalyMono Nerd Font", "JetBrains Mono Nerd Font", "Symbols Nerd Font";
+    font-size: 12px;
+    font-weight: 700;
+}
+
+window#waybar {
+    background: alpha(@bg, 0.9);
+    color: @text;
+    border: 1px solid alpha(@outline, 0.75);
+    border-radius: 14px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 4px 8px;
+}
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+    margin: 0 3px;
+}
+
+#workspaces,
+#tray,
+#clock,
+#network,
+#bluetooth,
+#battery,
+#temperature,
+#memory,
+#disk,
+#pulseaudio,
+#pulseaudio\.microphone,
+#mpris,
+#custom-menu,
+#custom-power,
+#custom-settings,
+#custom-rice,
+#custom-hyprwave,
+#custom-swaync,
+#custom-cava_mviz,
+#hyprland-window,
+#window {
+    border-radius: 11px;
+    padding: 3px 10px;
+    background: alpha(@surface, 0.9);
+    color: @text;
+    border: 1px solid alpha(@outline, 0.5);
+}
+
+#workspaces button {
+    all: unset;
+    padding: 2px 8px;
+    margin: 0 2px;
+    color: @text-soft;
+    border-radius: 8px;
+}
+
+#workspaces button.active,
+#workspaces button.focused,
+#workspaces button.visible {
+    color: @accent-on;
+    background: alpha(@accent, 0.96);
+    border: 1px solid alpha(@accent, 1);
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: alpha(@surface-hi, 0.96);
+}
+
+#custom-settings,
+#custom-rice,
+#custom-hyprwave,
+#custom-menu,
+#custom-power {
+    color: @accent-on;
+    background: alpha(@accent, 0.92);
+    border-color: alpha(@accent, 1);
+}
+
+#clock {
+    color: @accent-2;
+    border-color: alpha(@accent-2, 0.85);
+}
+
+#network.wifi,
+#bluetooth {
+    color: @accent-2;
+    border-color: alpha(@accent-2, 0.6);
+}
+
+#custom-swaync,
+#mpris,
+#custom-cava_mviz {
+    color: @text-soft;
+    border-color: alpha(@text-soft, 0.5);
+}
+
+#custom-swaync.notification,
+#custom-swaync.inhibited-notification,
+#custom-swaync.dnd-notification,
+#custom-swaync.dnd-inhibited-notification {
+    color: @accent-on;
+    background: alpha(@accent-3, 0.88);
+    border-color: alpha(@accent-3, 1);
+}
+
+#network.disconnected,
+#bluetooth.disabled,
+#battery.critical,
+#battery.warning,
+#pulseaudio.muted {
+    color: @danger;
+    border-color: alpha(@danger, 0.8);
+    background: alpha(@danger, 0.16);
+}
+
+#group-quickshell_ui,
+#group-notify,
+#group-audio,
+#group-connections,
+#group-mobo_drawer {
+    border-radius: 12px;
+    padding: 0 2px;
+    background: transparent;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 1px solid alpha(@outline, 0.85);
+    background: alpha(@bg-soft, 0.98);
+    color: @text;
+}
+
+tooltip label {
+    color: @text;
+}

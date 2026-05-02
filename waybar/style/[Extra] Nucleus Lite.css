@@ -1,0 +1,212 @@
+/* ---- Nucleus Lite: lean, readable, control-center style ---- */
+
+@define-color base #161217;
+@define-color mantle #1f1a1f;
+@define-color surface0 #231e23;
+@define-color surface1 #2d282e;
+@define-color text #eae0e7;
+@define-color subtext #cfc3cd;
+@define-color blue #e5b6f2;
+@define-color lavender #d5c0d7;
+@define-color pink #f2dcf3;
+@define-color teal #f9d8ff;
+@define-color green #c9e7be;
+@define-color yellow #f2dfad;
+@define-color red #ffb4ab;
+
+/* nucleus-shell (MaterialColors.qml default) reference colors */
+@define-color nux-surface-high #2d282e;
+@define-color nux-outline #988e97;
+@define-color nux-on-surface #eae0e7;
+@define-color nux-on-surface-variant #cfc3cd;
+@define-color nux-primary #e5b6f2;
+@define-color nux-primary-container #5d386a;
+@define-color nux-on-primary-container #f9d8ff;
+@define-color nux-secondary-container #534457;
+@define-color nux-on-secondary-container #f2dcf3;
+@define-color nux-error #ffb4ab;
+@define-color nux-error-container #93000a;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font";
+    font-size: 12px;
+    font-weight: 700;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@mantle, 0.88);
+    color: @text;
+    border: 1px solid alpha(@surface1, 0.75);
+    border-radius: 16px;
+}
+
+tooltip {
+    background: @mantle;
+    color: @text;
+    border-radius: 10px;
+    border: 1px solid alpha(@blue, 0.7);
+}
+
+tooltip label {
+    color: @text;
+}
+
+#workspaces button {
+    all: unset;
+    color: @subtext;
+    border-radius: 10px;
+    margin: 2px 3px;
+    padding: 4px 5px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: @base;
+    background: @lavender;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: alpha(@surface1, 0.7);
+}
+
+#battery,
+#network,
+#bluetooth,
+#power-profiles-daemon,
+#clock,
+#tray,
+#pulseaudio,
+#pulseaudio-slider,
+#custom-menu,
+#custom-settings,
+#custom-power_vertical,
+#custom-swaync,
+#custom-dot_update,
+#custom-hyprwave {
+    border-radius: 12px;
+    margin: 2px 3px;
+    padding: 5px 6px;
+    background: alpha(@surface0, 0.82);
+    color: @text;
+    border: 1px solid transparent;
+}
+
+#battery {
+    color: @green;
+    background: alpha(@green, 0.16);
+    border-color: alpha(@green, 0.38);
+}
+
+#battery.warning,
+#battery.critical:not(.charging) {
+    color: @red;
+    background: alpha(@red, 0.2);
+    border-color: alpha(@red, 0.45);
+}
+
+#network {
+    color: @nux-on-surface;
+    background: alpha(@nux-surface-high, 0.95);
+    border-color: alpha(@nux-outline, 0.95);
+}
+
+#network.wifi {
+    color: @nux-on-primary-container;
+    background: alpha(@nux-primary-container, 0.95);
+    border-color: alpha(@nux-primary, 0.62);
+}
+
+#network.ethernet {
+    color: @nux-on-secondary-container;
+    background: alpha(@nux-secondary-container, 0.95);
+    border-color: alpha(@nux-outline, 0.95);
+}
+
+#network.disconnected,
+#network.disabled,
+#network.linked {
+    color: @nux-error;
+    background: alpha(@nux-error-container, 0.92);
+    border-color: alpha(@nux-error, 0.55);
+}
+
+#bluetooth {
+    color: @lavender;
+    background: alpha(@lavender, 0.16);
+    border-color: alpha(@lavender, 0.38);
+}
+
+#bluetooth.disabled {
+    color: @subtext;
+    background: alpha(@surface0, 0.9);
+    border-color: alpha(@surface1, 0.8);
+}
+
+#power-profiles-daemon {
+    color: @yellow;
+    background: alpha(@yellow, 0.14);
+    border-color: alpha(@yellow, 0.32);
+}
+
+#clock {
+    color: @pink;
+    background: alpha(@pink, 0.16);
+    border-color: alpha(@pink, 0.38);
+}
+
+#pulseaudio,
+#pulseaudio.microphone {
+    color: @teal;
+    background: alpha(@teal, 0.16);
+    border-color: alpha(@teal, 0.38);
+}
+
+#pulseaudio.muted {
+    color: @subtext;
+    background: alpha(@surface0, 0.9);
+    border-color: alpha(@surface1, 0.8);
+}
+
+#custom-settings {
+    color: @blue;
+    background: alpha(@blue, 0.16);
+    border-color: alpha(@blue, 0.38);
+}
+
+#custom-menu {
+    color: @pink;
+    background: alpha(@pink, 0.16);
+    border-color: alpha(@pink, 0.38);
+}
+
+#custom-hyprwave {
+    color: @nux-on-primary-container;
+    background: alpha(@nux-primary-container, 0.95);
+    border-color: alpha(@nux-primary, 0.62);
+}
+
+#custom-hyprwave.stopped {
+    color: @subtext;
+    background: alpha(@surface0, 0.92);
+    border-color: alpha(@nux-outline, 0.72);
+}
+
+#custom-power_vertical {
+    color: @red;
+    background: alpha(@red, 0.18);
+    border-color: alpha(@red, 0.42);
+}
+
+#custom-swaync {
+    color: @teal;
+}
+
+#tray {
+    color: @subtext;
+}
+
+.modules-left > widget:first-child > #battery {
+    margin-top: 6px;
+}

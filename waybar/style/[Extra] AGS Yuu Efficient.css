@@ -1,0 +1,143 @@
+/* ---- AGS Yuu Efficient (Top Only) ---- */
+
+* {
+    font-family: "Lexend Deca", "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #f2f4ff;
+}
+
+window#waybar.yuu-top-efficient {
+    background: transparent;
+}
+
+tooltip {
+    background: #0f1020;
+    border: 1px solid #50406d;
+    color: #f2f4ff;
+    border-radius: 10px;
+}
+
+button {
+    all: unset;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar.yuu-top-efficient .modules-left,
+window#waybar.yuu-top-efficient .modules-center,
+window#waybar.yuu-top-efficient .modules-right {
+    background: rgba(8, 10, 16, 0.98);
+    border: 1px solid rgba(80, 64, 109, 0.72);
+    border-radius: 14px;
+    padding: 1px 5px;
+    margin: 2px 2px 0;
+}
+
+window#waybar.yuu-top-efficient #custom-yuu-fedora-rofi,
+window#waybar.yuu-top-efficient #workspaces,
+window#waybar.yuu-top-efficient #custom-music,
+window#waybar.yuu-top-efficient #network,
+window#waybar.yuu-top-efficient #bluetooth,
+window#waybar.yuu-top-efficient #battery,
+window#waybar.yuu-top-efficient #clock {
+    background: transparent;
+    border: none;
+    margin: 0;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+
+window#waybar.yuu-top-efficient .modules-left > widget:first-child > #custom-yuu-fedora-rofi {
+    margin-left: 0;
+}
+
+window#waybar.yuu-top-efficient #custom-yuu-fedora-rofi {
+    color: #cfb8ff;
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+window#waybar.yuu-top-efficient #workspaces {
+    padding-left: 0;
+    padding-right: 2px;
+}
+
+window#waybar.yuu-top-efficient #workspaces button {
+    all: unset;
+    min-width: 14px;
+    padding: 0 5px;
+    margin: 0 1px;
+    border-radius: 6px;
+    color: #736695;
+    transition: all 0.16s ease;
+}
+
+window#waybar.yuu-top-efficient #workspaces button:hover {
+    background: #4f426b;
+    color: #e4d9ff;
+}
+
+window#waybar.yuu-top-efficient #workspaces button.active {
+    background: #b78cff;
+    color: #141322;
+}
+
+window#waybar.yuu-top-efficient #workspaces button.urgent {
+    background: #f38ba8;
+    color: #141322;
+}
+
+window#waybar.yuu-top-efficient #custom-music {
+    color: #d8c6ff;
+    min-width: 260px;
+    padding-left: 6px;
+    padding-right: 8px;
+}
+
+window#waybar.yuu-top-efficient #network,
+window#waybar.yuu-top-efficient #bluetooth,
+window#waybar.yuu-top-efficient #battery {
+    color: #cfb8ff;
+}
+
+window#waybar.yuu-top-efficient #network {
+    border-radius: 8px 0 0 8px;
+    padding-right: 5px;
+    margin-right: 0;
+}
+
+window#waybar.yuu-top-efficient #bluetooth {
+    border-radius: 0 8px 8px 0;
+    padding-left: 5px;
+    margin-left: 0;
+}
+
+window#waybar.yuu-top-efficient #clock {
+    color: #efe9ff;
+    padding-right: 9px;
+}
+
+window#waybar.yuu-top-efficient #network.disconnected,
+window#waybar.yuu-top-efficient #bluetooth.disabled {
+    color: #f3a3c5;
+}
+
+window#waybar.yuu-top-efficient #battery.warning {
+    color: #f9e2af;
+}
+
+window#waybar.yuu-top-efficient #battery.critical:not(.charging) {
+    color: #f38ba8;
+}
+
+window#waybar.yuu-top-efficient #battery.charging {
+    color: #a6e3a1;
+}

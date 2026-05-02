@@ -1,0 +1,102 @@
+/* ========================================
+   HyprWave - Rose Pine
+   Muted violet palette inspired by Rose Pine
+   ======================================== */
+
+:root {
+    /* Background Colors */
+    --bg-primary: rgba(25, 23, 36, 0.82);
+    --bg-secondary: rgba(31, 29, 46, 0.86);
+    --bg-album-cover: rgba(38, 35, 58, 0.90);
+    --bg-album-secondary: rgba(57, 53, 82, 0.92);
+
+    /* Button Colors - Default (Prev/Next) */
+    --btn-default: rgba(224, 222, 244, 0.90);
+    --btn-default-secondary: rgba(196, 193, 222, 0.90);
+    --btn-default-hover: rgba(240, 239, 255, 0.96);
+    --btn-default-hover-secondary: rgba(224, 222, 244, 0.96);
+
+    /* Button Colors - Play/Pause */
+    --btn-play: rgba(196, 167, 231, 0.96);
+    --btn-play-secondary: rgba(173, 144, 208, 0.96);
+    --btn-play-hover: rgba(214, 189, 245, 0.99);
+    --btn-play-hover-secondary: rgba(196, 167, 231, 0.99);
+    --btn-play-active: rgba(141, 114, 177, 0.95);
+    --btn-play-active-secondary: rgba(122, 95, 157, 0.95);
+
+    /* Button Colors - Expand */
+    --btn-expand: rgba(156, 207, 216, 0.96);
+    --btn-expand-secondary: rgba(133, 184, 194, 0.96);
+    --btn-expand-hover: rgba(183, 228, 235, 0.98);
+    --btn-expand-hover-secondary: rgba(156, 207, 216, 0.98);
+    --btn-expand-active: rgba(111, 161, 170, 0.95);
+    --btn-expand-active-secondary: rgba(95, 142, 151, 0.95);
+
+    /* Progress Bar Colors */
+    --progress-bg: rgba(57, 53, 82, 0.30);
+    --progress-fill-start: rgba(196, 167, 231, 0.95);
+    --progress-fill-end: rgba(156, 207, 216, 0.95);
+
+    /* Slider Handle Colors */
+    --handle-color: rgba(246, 193, 219, 0.98);
+    --handle-hover: rgba(251, 209, 231, 1.0);
+    --handle-border: rgba(196, 167, 231, 0.56);
+    --handle-shadow: rgba(196, 167, 231, 0.62);
+
+    /* Text Colors */
+    --text-primary: rgba(224, 222, 244, 0.96);
+    --text-secondary: rgba(196, 193, 222, 0.90);
+    --text-tertiary: rgba(144, 140, 170, 0.84);
+    --text-muted: rgba(110, 106, 134, 0.76);
+
+    /* Border Colors */
+    --border-primary: rgba(57, 53, 82, 0.56);
+    --border-button: rgba(110, 106, 134, 0.34);
+    --border-button-hover: rgba(144, 140, 170, 0.44);
+    --border-play: rgba(196, 167, 231, 0.44);
+    --border-play-hover: rgba(214, 189, 245, 0.56);
+    --border-expand: rgba(156, 207, 216, 0.44);
+    --border-expand-hover: rgba(183, 228, 235, 0.56);
+
+    /* Shadow Colors */
+    --shadow-default: rgba(0, 0, 0, 0.64);
+    --shadow-button: rgba(0, 0, 0, 0.50);
+    --shadow-play: rgba(196, 167, 231, 0.46);
+    --shadow-play-hover: rgba(214, 189, 245, 0.64);
+    --shadow-expand: rgba(156, 207, 216, 0.46);
+    --shadow-expand-hover: rgba(183, 228, 235, 0.64);
+    --shadow-focus: rgba(196, 167, 231, 0.64);
+
+    /* Spacing & Sizes */
+    --border-radius-container: 100px;
+    --border-radius-section: 20px;
+    --border-radius-album: 16px;
+    --border-radius-button: 50%;
+    --border-radius-progress: 2px;
+
+    --padding-container: 12px;
+    --padding-section: 16px;
+}
+
+.visualizer-bar {
+    background: linear-gradient(180deg,
+        rgba(246, 193, 219, 0.98),
+        rgba(196, 167, 231, 0.96),
+        rgba(156, 207, 216, 0.94));
+    border-radius: 0px;
+    transition: all 0.05s ease-out;
+    margin: 0px;
+    min-width: 1px;
+    min-height: 3px;
+    box-shadow: 0 0 14px rgba(196, 167, 231, 0.70),
+                0 0 9px rgba(156, 207, 216, 0.56);
+}
+
+.vertical-display-label {
+    font-family: 'VT323', monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(224, 222, 244, 0.98);
+    letter-spacing: 0px;
+    line-height: 1.2;
+}

@@ -1,0 +1,157 @@
+/* ---- Left Nucleus Soft Rail ---- */
+
+@define-color bg #1e1e2e;
+@define-color bg-soft #181825;
+@define-color surface #313244;
+@define-color surface-hi #45475a;
+@define-color text #cdd6f4;
+@define-color text-soft #a6adc8;
+@define-color accent #b4befe;
+@define-color accent-soft #f5bde6;
+@define-color accent-on #11111b;
+@define-color outline #7f849c;
+@define-color danger #ffb4ab;
+@define-color success #a6e3a1;
+@define-color info #89dceb;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "AnomalyMono Nerd Font", "JetBrainsMono Nerd Font", "Symbols Nerd Font";
+    font-size: 12px;
+    font-weight: 700;
+}
+
+window#waybar {
+    background: alpha(@bg, 0.8);
+    color: @text;
+    border: 1px solid alpha(@outline, 0.72);
+    border-left: 2px solid alpha(@accent, 0.62);
+    border-radius: 24px;
+}
+
+window#waybar.hidden {
+    opacity: 0.8;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 8px 6px;
+}
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+    margin: 4px 0;
+}
+
+#workspaces {
+    padding: 4px 0;
+    border-radius: 18px;
+    background: alpha(@surface, 0.66);
+    border: 1px solid alpha(@outline, 0.42);
+}
+
+#workspaces button {
+    all: unset;
+    min-width: 44px;
+    min-height: 28px;
+    margin: 3px 5px;
+    border-radius: 12px;
+    color: @text-soft;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: alpha(@surface-hi, 0.94);
+}
+
+#workspaces button.active,
+#workspaces button.focused,
+#workspaces button.visible {
+    color: @accent-on;
+    background: alpha(@accent, 0.92);
+    border: 1px solid alpha(@accent-soft, 0.5);
+}
+
+#custom-os_logo,
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#custom-power_vertical {
+    min-width: 54px;
+    padding: 9px 6px;
+    border-radius: 16px;
+    background: alpha(@surface, 0.88);
+    border: 1px solid alpha(@outline, 0.5);
+    color: @text;
+}
+
+#custom-os_logo {
+    font-size: 18px;
+    padding: 10px 0;
+    color: @accent-soft;
+    background: alpha(@surface-hi, 0.96);
+    border-color: alpha(@accent, 0.48);
+}
+
+#clock {
+    background: alpha(@surface-hi, 0.9);
+    color: @accent-soft;
+}
+
+#network,
+#pulseaudio,
+#battery {
+    color: @text-soft;
+}
+
+#network.wifi {
+    color: @info;
+    border-color: alpha(@info, 0.55);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @success;
+    border-color: alpha(@success, 0.55);
+}
+
+#network.disconnected,
+#battery.warning,
+#battery.critical,
+#pulseaudio.muted {
+    color: @danger;
+    border-color: alpha(@danger, 0.62);
+    background: alpha(@danger, 0.14);
+}
+
+#custom-power_vertical {
+    color: @accent-on;
+    background: alpha(@accent, 0.78);
+    border-color: alpha(@accent, 0.94);
+}
+
+#custom-os_logo:hover,
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-power_vertical:hover {
+    background: alpha(@surface-hi, 0.98);
+    color: @text;
+}
+
+tooltip {
+    border-radius: 14px;
+    border: 1px solid alpha(@accent, 0.68);
+    background: alpha(@bg-soft, 0.96);
+    color: @text;
+}
+
+tooltip label {
+    color: @text;
+}

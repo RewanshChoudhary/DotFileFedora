@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  border-radius: 0px;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+
+window#waybar {
+  background: #0a0e27;
+  padding: 3px 0;
+}
+
+window#waybar.hidden {
+  opacity: 0.98;
+}
+
+#window,
+#custom-updates,
+#tray,
+#network,
+#wireplumber,
+#battery,
+#backlight,
+#clock,
+#memory,
+#cpu,
+#custom-launcher,
+#custom-bluetooth,
+#mpris {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 10.5px;
+  color: #0a0e27;
+  margin-right: 6px;
+  margin-left: 6px;
+  padding: 3px 7px;
+  border-bottom: 2px solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* ======================================================== */
+/* workspaces module */
+/* ======================================================== */
+#workspaces {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #0a0e27;
+  padding: 3px 7px;
+  border-bottom: 2px solid;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-left: 2px;
+  padding: 0;
+}
+
+#workspaces button {
+  color: #c8d3f5;
+  border-radius: 0;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 1px;
+  margin-left: 1px;
+  min-width: 20px;
+  padding: 0 2px;
+}
+
+#workspaces button:hover {
+  background: #4a5a8f;
+}
+
+#workspaces button.active {
+  background: #6b7db8;
+  color: #0a0e27;
+}
+
+#workspaces button.urgent {
+  background: #e63946;
+}
+
+/* ======================================================== */
+/* window */
+/* ======================================================== */
+#window {
+  color: #c8d3f5;
+  background: #2a3d66;
+  border-radius: 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 3px 7px;
+  border-bottom-color: #1a2747;
+}
+
+window#waybar.empty #window {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: transparent;
+  border-bottom: none;
+}
+
+/* ======================================================== */
+/* Network module */
+/* ======================================================== */
+#network {
+  color: #9db4d8;
+  border-bottom-color: #9db4d8;
+}
+
+#network.disconnected {
+  color: #e63946;
+  border-bottom-color: #e63946;
+}
+
+/* ======================================================== */
+/* Audio module */
+/* ======================================================== */
+#wireplumber {
+  color: #7b8ec9;
+  border-bottom-color: #7b8ec9;
+}
+
+#wireplumber.muted {
+  color: #e63946;
+  border-bottom-color: #e63946;
+}
+
+/* ======================================================== */
+/* cpu */
+/* ======================================================== */
+#cpu {
+  color: #6b7db8;
+  border-bottom-color: #6b7db8;
+}
+
+/* ======================================================== */
+/* memory */
+/* ======================================================== */
+#memory {
+  color: #8a9fd8;
+  border-bottom-color: #8a9fd8;
+}
+
+/* ======================================================== */
+/* backlight */
+/* ======================================================== */
+#backlight {
+  color: #b5c9e8;
+  border-bottom-color: #b5c9e8;
+}
+
+/* ======================================================== */
+/* battery */
+/* ======================================================== */
+#battery {
+  color: #5a6fa8;
+  border-bottom-color: #5a6fa8;
+}
+
+#battery.charging, #battery.plugged {
+  color: #6b7db8;
+  border-bottom-color: #6b7db8;
+}
+
+#battery.critical:not(.charging) {
+  color: #e63946;
+  border-bottom-color: #e63946;
+}
+
+/* ======================================================== */
+/* clock */
+/* ======================================================== */
+#clock {
+  color: #a8bde8;
+  border-bottom-color: #a8bde8;
+}
+
+/* ======================================================== */
+/* tray */
+/* ======================================================== */
+#tray {
+  padding: 3px 7px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-bottom-color: #c8d3f5;
+}
+
+/* ======================================================== */
+/* custom-launcher */
+/* ======================================================== */
+#custom-launcher {
+  color: #1a2747;
+  font-size: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-bottom-color: #1a2747;
+}
+
+/* ======================================================== */
+/* custom-bluetooth */
+/* ======================================================== */
+#custom-bluetooth {
+  color: #4a5a8f;
+  border-bottom-color: #4a5a8f;
+}
+
+/* ======================================================== */
+/* custom-updates */
+/* ======================================================== */
+#custom-updates {
+  color: #7b8ec9;
+  border-bottom-color: #7b8ec9;
+}
+
+/* ======================================================== */
+/* Media player */
+/* ======================================================== */
+#mpris {
+  color: #8a9fd8;
+  border-bottom-color: #8a9fd8;
+}
+
+#mpris:hover {
+  color: #9db4d8;
+  border-bottom-color: #9db4d8;
+}
+
+/* ======================================================== */
+/* Taskbar */
+/* ======================================================== */
+#taskbar {
+  background: transparent;
+  padding: 0;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-bottom: none;
+}
+
+#taskbar button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 2px 1px;
+  padding: 2px 2px;
+  color: #c8d3f5;
+  border-bottom: 2px solid #4a5a8f;
+  min-width: 14px;
+}
+
+#taskbar button.active {
+  border-bottom-color: #6b7db8;
+}
+
+#taskbar button:hover {
+  border-bottom-color: #5a6fa8;
+}
+
+#taskbar button.urgent {
+  border-bottom-color: #e63946;
+}

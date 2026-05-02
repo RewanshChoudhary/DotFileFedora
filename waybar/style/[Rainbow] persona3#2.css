@@ -1,0 +1,411 @@
+/* ----  Persona 3 Reload - Memento Mori  ---- */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+/* Make waybar thinner */
+window#waybar {
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background-color: #0a0e1a;
+    border-bottom: 1px solid #1a2332;
+    color: #e8f0ff;
+    transition-property: background-color;
+    transition-duration: .3s;
+    padding: 0;
+    margin: 0;
+    opacity: 2;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+button {
+    all: unset;
+    background-color: rgba(37, 116, 255, 0.15);
+    color: #e8f0ff;
+    border: none;
+    border-radius: 2px;
+    padding: 0px 8px;
+    margin: 1px;
+    min-height: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(0, 174, 239, 0.25);
+    color: #ffffff;
+}
+
+button.active {
+    background-color: #2574ff;
+    color: #0a0e1a;
+}
+
+#mode {
+    background-color: #00aeef;
+    color: #0a0e1a;
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,	
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    color: #e8f0ff;
+    padding: 3px 3px;
+    margin: 2px 3px;
+    border-radius: 2px;
+    background-color: rgba(26, 35, 50, 0.5);
+}
+
+#window,
+#workspaces {
+    margin: 0 2px;
+}
+.modules-center {
+  margin : 0 2px;
+   
+}
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+    font-weight:900;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#window {
+    background-color: rgba(37, 116, 255, 0.3);
+    color: #e8f0ff;
+     padding: 3px 3px;
+}
+
+#custom-swaync {
+    background-color: #00aeef;
+    color: #0a0e1a;
+}
+
+#custom-menu {
+    background-color: #2574ff;
+    color: #ffffff;
+}
+
+#custom-power {
+    background-color: #d32f2f;
+    color: #ffffff;
+    padding: 3px 10px;
+}
+
+#custom-power_vertical {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+#clock {
+    background-color: #00aeef;
+    color: #0a0e1a;
+    font-weight: 900;
+}
+
+#battery {
+    background-color: #4fc3f7;
+    color: #0a0e1a;
+}
+
+@keyframes blink {
+    to {
+        background-color: #d32f2f;
+        color: #ffffff;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #d32f2f;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #1a2332;
+}
+
+#cpu {
+    background-color: #2574ff;
+    color: #ffffff;
+}
+
+#memory {
+    background-color: #00aeef;
+    color: #0a0e1a;
+}
+
+#disk {
+    background-color: #64b5f6;
+    color: #0a0e1a;
+}
+
+#custom-lock,
+#custom-light_dark,
+#backlight {
+    background-color: #fdd835;
+    color: #0a0e1a;
+}
+
+#network {
+    background-color: #5c6bc0;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+#pulseaudio {
+    background-color: #42a5f5;
+    color: #0a0e1a;
+}
+
+#pulseaudio.muted {
+    background-color: rgba(66, 165, 245, 0.4);
+    color: #5c7a94;
+}
+
+#wireplumber {
+    background-color: #42a5f5;
+    color: #0a0e1a;
+}
+
+#wireplumber.muted {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+#custom-media {
+    background-color: #7e57c2;
+    color: #ffffff;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #7e57c2;
+    color: #ffffff;
+}
+
+#custom-media.custom-vlc {
+    background-color: #64b5f6;
+    color: #0a0e1a;
+}
+
+#temperature {
+    background-color: #ef5350;
+    color: #ffffff;
+}
+
+#temperature.critical {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+#tray {
+    background-color: transparent;
+    padding: 3px 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #d32f2f;
+}
+
+#idle_inhibitor {
+    background-color: rgba(232, 240, 255, 0.2);
+    color: #e8f0ff;
+}
+
+#idle_inhibitor.activated {
+    background-color: #4fc3f7;
+    color: #0a0e1a;
+}
+
+#mpd {
+    background-color: #7e57c2;
+    color: #ffffff;
+}
+
+#mpd.disconnected {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+#mpd.stopped {
+    background-color: rgba(126, 87, 194, 0.4);
+    color: #5c7a94;
+}
+
+#mpd.paused {
+    background-color: #5c6bc0;
+    color: #ffffff;
+}
+
+#language {
+    background-color: #00aeef;
+    color: #0a0e1a;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background-color: #2574ff;
+    color: #ffffff;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 4px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#scratchpad {
+    background: rgba(232, 240, 255, 0.1);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+/* Tooltip Styling */
+tooltip {
+    background-color: #1a2332;
+    border: 1px solid #2d3e57;
+    border-radius: 8px;
+}
+
+tooltip decoration {
+    box-shadow: none;
+}
+
+tooltip decoration:backdrop {
+    box-shadow: none;
+}
+
+tooltip label {
+    color: #e8f0ff;
+    padding: 6px 10px;
+}
+
+/* Slider Styling - Minimal & Clean */
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    background-color: rgba(92, 122, 148, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: #42a5f5;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    background-color: rgba(92, 122, 148, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider highlight {
+    background-color: #fdd835;
+    min-height: 3px;
+    border-radius: 3px;
+}

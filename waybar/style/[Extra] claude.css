@@ -1,0 +1,435 @@
+/* ----  CRT Sunset - Retro Gaming Vibes  ---- */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+/* Make waybar thinner */
+window#waybar {
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background-color: #1a0f1f;
+    border-bottom: 1px solid #2d1b3d;
+    color: #ffd1dc;
+    transition-property: background-color;
+    transition-duration: .3s;
+    padding: 0;
+    margin: 0;
+    opacity: 2;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+button {
+    all: unset;
+    background-color: rgba(255, 107, 129, 0.15);
+    color: #ffd1dc;
+    border: none;
+    border-radius: 2px;
+    padding: 0px 8px;
+    margin: 1px;
+    min-height: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(255, 184, 108, 0.25);
+    color: #ffffff;
+}
+
+button.active {
+    background-color: #ff6b81;
+    color: #1a0f1f;
+}
+
+#mode {
+    background-color: #ffb86c;
+    color: #1a0f1f;
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,	
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+    color: #ffd1dc;
+    padding: 3px 3px;
+    margin: 2px 3px;
+    border-radius: 2px;
+    background-color: rgba(45, 27, 61, 0.5);
+}
+
+#window,
+#workspaces {
+    margin: 0 2px;
+}
+.modules-center {
+  margin : 0 2px;
+   
+}
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+    font-weight:900;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#window {
+    background-color: rgba(138, 94, 255, 0.3);
+    color: #ffd1dc;
+     padding: 3px 3px;
+}
+
+#custom-swaync {
+    background-color: #00d9ff;
+    color: #1a0f1f;
+}
+
+#custom-menu {
+    background-color: #ff6b81;
+    color: #1a0f1f;
+}
+
+#custom-power {
+    background-color: #ff5252;
+    color: #1a0f1f;
+    padding: 3px 10px;
+}
+
+#custom-power_vertical {
+    background-color: #ff5252;
+    color: #1a0f1f;
+}
+
+#clock {
+    background-color: #ffb86c;
+    color: #1a0f1f;
+    font-weight: 900;
+}
+
+#battery {
+    background-color: #7ce38b;
+    color: #1a0f1f;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ff5252;
+        color: #1a0f1f;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ff5252;
+    color: #1a0f1f;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #2d1b3d;
+}
+
+#cpu {
+    background-color: #ff6b81;
+    color: #1a0f1f;
+}
+
+#memory {
+    background-color: #00d9ff;
+    color: #1a0f1f;
+}
+
+#disk {
+    background-color: #ffb86c;
+    color: #1a0f1f;
+}
+
+#custom-lock,
+#custom-light_dark,
+#backlight {
+    background-color: #f9f871;
+    color: #1a0f1f;
+}
+
+#network {
+    background-color: #8a5eff;
+    color: #ffd1dc;
+}
+
+#network.disconnected {
+    background-color: #ff5252;
+    color: #ffd1dc;
+}
+
+#pulseaudio {
+    background-color: #ff79c6;
+    color: #1a0f1f;
+}
+
+#pulseaudio.muted {
+    background-color: rgba(255, 121, 198, 0.4);
+    color: #6b4d7a;
+}
+
+#wireplumber {
+    background-color: #ff79c6;
+    color: #1a0f1f;
+}
+
+#wireplumber.muted {
+    background-color: #ff5252;
+    color: #1a0f1f;
+}
+
+#custom-media {
+    background-color: #bd93f9;
+    color: #1a0f1f;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #bd93f9;
+    color: #1a0f1f;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffb86c;
+    color: #1a0f1f;
+}
+
+#temperature {
+    background-color: #ff6b81;
+    color: #1a0f1f;
+}
+
+#temperature.critical {
+    background-color: #ff5252;
+    color: #1a0f1f;
+}
+
+#tray {
+    background-color: transparent;
+    padding: 3px 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #ff5252;
+}
+
+#idle_inhibitor {
+    background-color: rgba(255, 209, 220, 0.2);
+    color: #ffd1dc;
+}
+
+#idle_inhibitor.activated {
+    background-color: #7ce38b;
+    color: #1a0f1f;
+}
+
+#mpd {
+    background-color: #bd93f9;
+    color: #1a0f1f;
+}
+
+#mpd.disconnected {
+    background-color: #ff5252;
+    color: #1a0f1f;
+}
+
+#mpd.stopped {
+    background-color: rgba(189, 147, 249, 0.4);
+    color: #6b4d7a;
+}
+
+#mpd.paused {
+    background-color: #8a5eff;
+    color: #1a0f1f;
+}
+
+#language {
+    background-color: #00d9ff;
+    color: #1a0f1f;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background-color: #ff6b81;
+    color: #1a0f1f;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 4px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#scratchpad {
+    background: rgba(255, 209, 220, 0.1);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+/* Tooltip Styling */
+tooltip {
+    background-color: #2d1b3d;
+    border: 1px solid #4a2d5f;
+    border-radius: 8px;
+}
+
+tooltip decoration {
+    box-shadow: none;
+}
+
+tooltip decoration:backdrop {
+    box-shadow: none;
+}
+
+tooltip label {
+    color: #ffd1dc;
+    padding: 6px 10px;
+}
+
+/* Slider Styling - Minimal & Clean */
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    background-color: rgba(107, 77, 122, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: #ff79c6;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    background-color: rgba(107, 77, 122, 0.5);
+    min-width: 80px;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+#backlight-slider highlight {
+    background-color: #f9f871;
+    min-height: 3px;
+    border-radius: 3px;
+}
+
+/* Music widget (WestWing custom) */
+#custom-hyprwave {
+    background-color: #8a5eff;
+    color: #ffd1dc;
+    min-width: 16px;
+    padding: 3px 4px;
+}
+
+#custom-hyprwave.playing {
+    background-color: #7ce38b;
+    color: #1a0f1f;
+}
+
+#custom-hyprwave.paused {
+    background-color: #ffb86c;
+    color: #1a0f1f;
+}
+
+#custom-hyprwave.stopped,
+#custom-hyprwave.missing {
+    background-color: rgba(138, 94, 255, 0.35);
+    color: #ffd1dc;
+}
