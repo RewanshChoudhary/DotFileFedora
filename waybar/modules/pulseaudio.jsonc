@@ -1,0 +1,33 @@
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "rotate": ${r_deg},
+        "format-muted": "婢",
+        "on-click": "pavucontrol -t 3",
+        "on-click-middle": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -o m",
+        "on-scroll-up": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -o i",
+        "on-scroll-down": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -o d",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "rotate": ${r_deg},
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pavucontrol -t 4",
+        "on-click-middle": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -i m",
+        "on-scroll-up": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -i i",
+        "on-scroll-down": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -i d",
+        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+        "scroll-step": 5
+    },

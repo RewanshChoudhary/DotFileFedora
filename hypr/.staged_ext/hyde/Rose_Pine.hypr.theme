@@ -1,0 +1,6 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+# hyde-meta: gtk-theme=Rose-Pine
+# hyde-meta: icon-theme=Tela-circle-pink
+env = GTK_THEME,Rose-Pine
+
+layerrule = blur on, match:namespace ^(waybar)$

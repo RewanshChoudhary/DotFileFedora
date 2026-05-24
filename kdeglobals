@@ -1,0 +1,8 @@
+[General]
+TerminalApplication=kitty
+
+[Icons]
+Theme=Tela-circle-dracula
+
+[KDE]
+widgetStyle=qt6ct-style

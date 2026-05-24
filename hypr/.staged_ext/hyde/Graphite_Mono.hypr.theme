@@ -1,0 +1,4 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+# hyde-meta: gtk-theme=Graphite-Mono
+# hyde-meta: icon-theme=Tela-circle-grey
+env = GTK_THEME,Graphite-Mono

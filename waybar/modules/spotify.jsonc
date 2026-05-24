@@ -1,0 +1,14 @@
+    "custom/spotify": {
+        "exec": "mediaplayer.py --player spotify",
+        "format": " {}",
+        "rotate": ${r_deg},
+        "return-type": "json",
+        "on-click": "playerctl play-pause --player spotify",
+        "on-click-right": "playerctl next --player spotify",
+        "on-click-middle": "playerctl previous --player spotify",
+        "on-scroll-up": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -p spotify i",
+        "on-scroll-down": "/home/rewansh57/.config/hypr/.staged_ext/bin/volumecontrol.sh -p spotify d",
+        "max-length": 25,
+        "escape": true,
+        "tooltip": true
+    },

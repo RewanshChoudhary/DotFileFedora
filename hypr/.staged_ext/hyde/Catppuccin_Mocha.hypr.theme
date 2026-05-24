@@ -1,0 +1,6 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+# hyde-meta: gtk-theme=Catppuccin-Mocha
+# hyde-meta: icon-theme=Tela-circle-dracula
+env = GTK_THEME,Catppuccin-Mocha
+
+layerrule = blur on, match:namespace ^(waybar)$

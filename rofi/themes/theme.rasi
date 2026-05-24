@@ -1,0 +1,12 @@
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+
+* {
+    main-bg:            @background;
+    main-fg:            @foreground;
+    main-br:            @color12;
+    main-ex:            @color11;
+    select-bg:          @color12;
+    select-fg:          @background;
+    separatorcolor:     transparent;
+    border-color:       transparent;
+}

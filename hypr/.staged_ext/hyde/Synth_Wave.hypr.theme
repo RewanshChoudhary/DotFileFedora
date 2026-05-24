@@ -1,0 +1,6 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+# hyde-meta: gtk-theme=Synth-Wave
+# hyde-meta: icon-theme=BeautyLine
+env = GTK_THEME,Synth-Wave
+
+layerrule = blur on, match:namespace ^(waybar)$

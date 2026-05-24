@@ -1,0 +1,74 @@
+// Rofi config for the Kitty+Starship theme selector
+configuration {
+    modi:                        "drun";
+    font:                        "JetBrainsMono Nerd Font 10";
+}
+
+@theme "~/.config/rofi/themes/theme.rasi"
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       50em;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      0em;
+    border-radius:               0em;
+    border-color:                transparent;
+    background-color:            transparent;
+}
+
+mainbox {
+    enabled:                     true;
+    children:                    [ "message", "listview" ];
+    background-color:            @main-bg;
+    padding:                     1em;
+    border-radius:               1em;
+}
+
+message {
+    enabled:                     true;
+    padding:                     0.5em;
+    text-color:                  @main-fg;
+    background-color:            transparent;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       15;
+    spacing:                     0.2em;
+    padding:                     0.5em 0em;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0.3em 0.8em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+    border-radius:               0.5em;
+}
+
+element selected.normal {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
